@@ -1,0 +1,206 @@
+/* ----------------- General Styles ----------------- */
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* ----------------- Animated H2 ----------------- */
+h2 {
+    width: 100%;
+    font-size: 40px;
+    background-image: url(image/eye.jpg);
+    background-clip: text;
+    -webkit-background-clip: text; /* for Chrome/Safari */
+    color: transparent;
+    background-size: 300% 300%;
+    animation: animated 8s ease infinite;
+}
+
+/* Fade & zoom animation for H2 */
+.animate {
+    animation: fadeZoom 1.5s ease-out forwards;
+    width: 100%;
+}
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ----------------- Navbar ----------------- */
+.nav {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background: linear-gradient(270deg, #ff512f, #dd2476, #1fa2ff, #12c2e9);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* align items to the right */
+    align-items: center;
+    height: 100%;
+}
+
+.nav ul li {
+    margin-left: 20px; /* space between items */
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-weight: bold;
+}
+
+/* ----------------- Next Section ----------------- */
+.next {
+    width: 100%;
+    background: #f4f4f4;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* for responsiveness */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* ----------------- Slide Right Animation ----------------- */
+.slide-right {
+    opacity: 0; /* start invisible */
+    transform: translateX(100px); /* start off-screen */
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* end at original position */
+    }
+}
+
+/* ----------------- Button ----------------- */
+.text button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff512f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: buts 2s ease infinite;
+}
+
+@keyframes buts {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text button:hover {
+    background-color: #dd2476;
+}
+
+/* ----------------- Image ----------------- */
+.image {
+    flex: 1;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ----------------- Bounce Text on H3 ----------------- */
+.bounce-text span {
+    display: inline-block;
+    cursor: default; /* no individual hover required */
+}
+
+/* Wave jump animation when parent h3 is hovered */
+.bounce-text:hover span {
+    animation: bounce 0.6s ease forwards;
+}
+
+/* Stagger each letter for wave effect */
+.bounce-text span:nth-child(1)  { animation-delay: 0s; }
+.bounce-text span:nth-child(2)  { animation-delay: 0.05s; }
+.bounce-text span:nth-child(3)  { animation-delay: 0.1s; }
+.bounce-text span:nth-child(4)  { animation-delay: 0.15s; }
+.bounce-text span:nth-child(5)  { animation-delay: 0.2s; }
+.bounce-text span:nth-child(6)  { animation-delay: 0.25s; }
+.bounce-text span:nth-child(7)  { animation-delay: 0.3s; }
+.bounce-text span:nth-child(8)  { animation-delay: 0.35s; }
+.bounce-text span:nth-child(9)  { animation-delay: 0.4s; }
+.bounce-text span:nth-child(10) { animation-delay: 0.45s; }
+.bounce-text span:nth-child(11) { animation-delay: 0.5s; }
+.bounce-text span:nth-child(12) { animation-delay: 0.55s; }
+.bounce-text span:nth-child(13) { animation-delay: 0.6s; }
+.bounce-text span:nth-child(14) { animation-delay: 0.65s; }
+.bounce-text span:nth-child(15) { animation-delay: 0.7s; }
+.bounce-text span:nth-child(16) { animation-delay: 0.75s; }
+.bounce-text span:nth-child(17) { animation-delay: 0.8s; }
+.bounce-text span:nth-child(18) { animation-delay: 0.85s; }
+.bounce-text span:nth-child(19) { animation-delay: 0.9s; }
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-20px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
